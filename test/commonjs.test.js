@@ -1,4 +1,4 @@
-const { consec, palisub } = require('../src/commonjs')
+const { consec, palisub } = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
   test('counting consecutive numbers', () => {
