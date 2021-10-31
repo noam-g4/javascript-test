@@ -30,20 +30,20 @@ const consec = () => TODO
 const palisub = () => TODO
 
 /* ============================================================================
- * 3. PIPE
+ * 3. PIPE AND CURRYING
  *
- * write a function that takes an array of functions,
- * and an undefined amount of arguments.
- * this function should return the result of passing all of the inner functions
+ * write a function that takes a list of functions,
+ * and returns a function that takes a single value.
+ * the inner(returned) function should output the result
+ * of running the list of functions in series passed with the
+ * the value as the initial value.
  *
  * EXAMPLE:
- * pipe([add5, div2, mul4], 3) => 16
+ * const f = pipe([add5, div2, mul4])
+ * f(3) => 16
  * !note - this is the same as calling: mul4(div2(add5(3))) => 16
- *
- * pipe([add, div, pow], 4, 2) => [9, 2]
- * !note - this is the same as calling: pow(div(add(4, 2), 2), 2)
  */
-const pipe = () => TODO
+const pipe = () => () => TODO
 
 // ============================================================================
 module.exports = {

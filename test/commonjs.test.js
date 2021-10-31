@@ -26,14 +26,11 @@ describe('COMMON JS TEST', () => {
   })
 
   test('pipe function implementation', () => {
-    const fns1 = [x => x + 5, x => x / 2, x => x * 4]
-    const fns2 = [
-      (a, b) => [a + b, b],
-      (a, b) => [a / b, b],
-      (a, b) => [Math.pow(a, b), b],
-    ]
+    const add5 = x => x + 5
+    const div2 = x => x / 2
+    const mul4 = x => x * 4
+    const fns1 = [add5, div2, mul4]
 
-    expect(pipe(fns1, 7)).toBe(24)
-    expect(pipe(fns2, 8, 2)[0]).toBe(25)
+    expect(pipe(...fns1)(7)).toBe(24)
   })
 })
