@@ -10,7 +10,7 @@ const TODO = null
  * consec(5) => 0 + 1 + 2 + 3 + 4 + 5 => 15
  */
 
-module.exports.consec = () => TODO
+const consec = () => TODO
 
 /* ============================================================================
  * 2. SUB-STRING PALINDROME FINDER
@@ -21,9 +21,17 @@ module.exports.consec = () => TODO
  * and repeats the process.
  * if it is, return the result
  *
+ * !note - trim spaces from result
+ *
  * EXAMPLE:
  * palisub("so i ask mom to smile") => "mom"
  * palisub("no palindromes here") => ""
  */
 
-module.exports.palisub = () => TODO
+const palisub = () => TODO
+
+// ============================================================================
+mocdule.exports = {
+  consec,
+  palisub,
+}
