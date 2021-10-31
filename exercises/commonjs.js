@@ -9,7 +9,6 @@ const TODO = null
  * EXAMPLE:
  * consec(5) => 0 + 1 + 2 + 3 + 4 + 5 => 15
  */
-
 const consec = () => TODO
 
 /* ============================================================================
@@ -21,17 +20,17 @@ const consec = () => TODO
  * and repeats the process.
  * if it is, return the result
  *
- * !note - trim spaces from result
+ * !note - do not return a single character
+ * !note - return a trimmed string
  *
  * EXAMPLE:
  * palisub("so i ask mom to smile") => "mom"
  * palisub("no palindromes here") => ""
  */
-
 const palisub = () => TODO
 
 // ============================================================================
-mocdule.exports = {
+module.exports = {
   consec,
   palisub,
 }

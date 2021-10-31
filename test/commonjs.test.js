@@ -19,7 +19,7 @@ describe('COMMON JS TEST', () => {
       ['abcdefgfeabcd', 'efgfe'],
       ['this string does not contain a palindromatic substring', ''],
       ['a whole new level for abcde i', 'level'],
-      ['good job wow well done', 'wow'],
+      ['good job, wow well done', 'wow'],
     ]
 
     io.forEach(xy => expect(palisub(xy[0])).toBe(xy[1]))
