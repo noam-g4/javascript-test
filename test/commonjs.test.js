@@ -1,4 +1,4 @@
-const { consec } = require('../src/commonjs')
+const { consec, palisub } = require('../src/commonjs')
 
 describe('COMMON JS TEST', () => {
   test('counting consecutive numbers', () => {
@@ -11,5 +11,17 @@ describe('COMMON JS TEST', () => {
     ]
 
     io.forEach(xy => expect(consec(xy[0])).toBe(xy[1]))
+  })
+
+  test('checking palindromes in substrings', () => {
+    const io = [
+      ['coolracecaritis', 'racecar'],
+      ['abcdefgfeabcd', 'efgfe'],
+      ['this string does not contain a palindromatic substring', ''],
+      ['a whole new level for abcde i', 'level'],
+      ['good job wow well done', 'wow'],
+    ]
+
+    io.forEach(xy => expect(palisub(xy[0])).toBe(xy[1]))
   })
 })
