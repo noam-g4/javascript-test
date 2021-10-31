@@ -29,8 +29,25 @@ const consec = () => TODO
  */
 const palisub = () => TODO
 
+/* ============================================================================
+ * 3. PIPE
+ *
+ * write a function that takes an array of functions,
+ * and an undefined amount of arguments.
+ * this function should return the result of passing all of the inner functions
+ *
+ * EXAMPLE:
+ * pipe([add5, div2, mul4], 3) => 16
+ * !note - this is the same as calling: mul4(div2(add5(3))) => 16
+ *
+ * pipe([add, div, pow], 4, 2) => [9, 2]
+ * !note - this is the same as calling: pow(div(add(4, 2), 2), 2)
+ */
+const pipe = () => TODO
+
 // ============================================================================
 module.exports = {
   consec,
   palisub,
+  pipe,
 }
