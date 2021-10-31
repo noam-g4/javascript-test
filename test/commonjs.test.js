@@ -7,7 +7,7 @@ describe('COMMON JS TEST', () => {
       [10, 55],
       [0, 0],
       [65, 2145],
-      [91, 4168],
+      [91, 4186],
     ]
 
     io.forEach(xy => expect(consec(xy[0])).toBe(xy[1]))

@@ -9,4 +9,4 @@ const TODO = null
  * EXAMPLE:
  * consec(5) => 0 + 1 + 2 + 3 + 4 + 5 => 15
  */
-module.exports.consec = () => TODO
+module.exports.consec = n => ((1 + n) / 2) * n
