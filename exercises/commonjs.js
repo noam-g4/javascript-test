@@ -3,7 +3,7 @@ const TODO = null
 /* ============================================================================
  * 1. CONSECUTIVE NUMBER COUNTER
  *
- * write a function that takes an number(0 to positive) n,
+ * write a function that takes a number(positive integer) n,
  * and returns the sum of all consecutive numbers from 0..n
  *
  * EXAMPLE:
