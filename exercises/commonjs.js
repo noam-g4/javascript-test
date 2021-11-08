@@ -39,7 +39,7 @@ const palisub = () => TODO
  * the value as the initial value.
  *
  * EXAMPLE:
- * const f = pipe([add5, div2, mul4])
+ * const f = pipe(add5, div2, mul4)
  * f(3) => 16
  * !note - this is the same as calling: mul4(div2(add5(3))) => 16
  */
