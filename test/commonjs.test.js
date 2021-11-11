@@ -5,6 +5,7 @@ const {
   requestMockup,
   filterMap,
   reqMockWrapper,
+  indexInArray,
 } = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
@@ -68,5 +69,10 @@ describe('COMMON JS TEST', () => {
     reqMockWrapper(false, undefined, 'fail').catch(err =>
       expect(err).toBe('fail')
     )
+  })
+
+  test('throw an error', () => {
+    expect(indexInArray([1, 2, 3], 2).message).toBe('out of bounds')
+    expect(indexInArray([1, 2, 3], 4)).toBe(3)
   })
 })

@@ -97,6 +97,21 @@ const requestMockup = () => TODO
  */
 const reqMockWrapper = async () => TODO
 
+/* ============================================================================
+ * 7. THROW AN ERROR
+ *
+ * write a function that takes an array and a number
+ * if the length of the array is larger than the number,
+ * throw and error with the message "out of bounds"
+ * else, return the length of the array. (use try/catch block)
+ *
+ * EXAMPLE
+ * const max = Number
+ * indexInArray([1, 2, 3], 2) // returns => 3
+ * indexInArray([1, 2, 3], 4) // returns => Error('out of bounds')
+ */
+const indexInArray = () => TODO
+
 // ============================================================================
 module.exports = {
   consec,
@@ -105,4 +120,5 @@ module.exports = {
   requestMockup,
   reqMockWrapper,
   filterMap,
+  indexInArray,
 }
