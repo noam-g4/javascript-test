@@ -40,16 +40,11 @@ describe('COMMON JS TEST', () => {
   })
 
   test('request mockup', () => {
-    const caller = async success => {
-      try {
-        const { data } = await requestMockup(success, 'success', 'fail')
-        return data
-      } catch (err) {
-        return err
-      }
-    }
-
-    expect(caller(true)).toBe('success')
-    expect(caller(false)).toBe('fail')
+    requestMockup(true, 'success', undefined).then(res =>
+      expect(res.data).toBe('success')
+    )
+    requestMockup(false, undefined, 'fail').catch(err =>
+      expect(err).toBe('fail')
+    )
   })
 })

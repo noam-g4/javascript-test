@@ -77,7 +77,7 @@ const pipe = () => () => TODO
  *
  * caller(false) => { msg: 'fail!' } (after 3 seconds)
  */
-const requestMockup = () => TODO
+const requestMockup = (success, data, err) => TODO
 
 // ============================================================================
 module.exports = {
