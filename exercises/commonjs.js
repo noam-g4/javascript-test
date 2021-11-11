@@ -1,7 +1,24 @@
 const TODO = null
+/* ============================================================================
+ * 1. HIGHER ORDER FUNCTIONS
+ *
+ * write a function that takes an array of similar objects, a predicate function
+ * (a function that return true/false) and a string that represent a key in an object.
+ * this function takes the array, filters it by the predicate and returns a NEW ARRAY
+ * contained the values of the passed key name.
+ *
+ * EXAMPLE:
+ * const employees = [{name: 'john', role: 'dev', email: 'john@mail.com'},
+ *                    {name: 'jane', role:'data', email: 'jane@mail.com'},
+ *                    ...etc]
+ *
+ * filterMap(employees, e => e.role === 'dev', 'email')
+ * this should return => ['john@mail.com', ...and all the emails of the the "dev" employees]
+ */
+const filterMap = () => TODO
 
 /* ============================================================================
- * 1. CONSECUTIVE NUMBER COUNTER
+ * 2. CONSECUTIVE NUMBER COUNTER
  *
  * write a function that takes a number(positive integer) n,
  * and returns the sum of all consecutive numbers from 0..n
@@ -12,7 +29,7 @@ const TODO = null
 const consec = () => TODO
 
 /* ============================================================================
- * 2. SUB-STRING PALINDROME FINDER
+ * 3. SUB-STRING PALINDROME FINDER
  *
  * write a function that takes a string,
  * checks if it's a palindrome (the same when read in reverse)
@@ -30,7 +47,7 @@ const consec = () => TODO
 const palisub = () => TODO
 
 /* ============================================================================
- * 3. PIPE AND CURRYING
+ * 4. PIPE AND CURRYING
  *
  * write a function that takes a list of functions,
  * and returns a function that takes a single value.
@@ -46,7 +63,7 @@ const palisub = () => TODO
 const pipe = () => () => TODO
 
 /* ============================================================================
- * 4. REQUEST MOCKUP
+ * 5. REQUEST MOCKUP
  *
  * a request mockup, is a function that mimics the behaviour of a service request
  * (like a RestAPI over http request).
@@ -66,7 +83,7 @@ const pipe = () => () => TODO
 const requestMockup = () => TODO
 
 /* ============================================================================
- * 5. ASYNC/AWAIT - TRY/CATCH
+ * 6. ASYNC/AWAIT - TRY/CATCH
  *
  * write an async function that wraps around the function from the last question.
  * it takes EXACTLY the same arguments as the last function and passes them on,
@@ -87,4 +104,5 @@ module.exports = {
   pipe,
   requestMockup,
   reqMockWrapper,
+  filterMap,
 }

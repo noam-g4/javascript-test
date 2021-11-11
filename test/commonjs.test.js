@@ -3,10 +3,22 @@ const {
   palisub,
   pipe,
   requestMockup,
+  filterMap,
   reqMockWrapper,
 } = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
+  test('higher order functions', () => {
+    const xs = [
+      { role: 'dev', email: 'john@email.com' },
+      { role: 'data', email: 'jane@email.com' },
+    ]
+
+    expect(filterMap(xs, x => x.role === 'dev', 'email')[0]).toBe(
+      'john@email.com'
+    )
+  })
+
   test('counting consecutive numbers', () => {
     const io = [
       [5, 15],
