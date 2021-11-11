@@ -45,9 +45,44 @@ const palisub = () => TODO
  */
 const pipe = () => () => TODO
 
+/* ============================================================================
+ * 4. REQUEST MOCKUP
+ *
+ * a request mockup, is a function that mimics the behaviour of a service request
+ * (like a RestAPI over http request).
+ *
+ * write a function that takes a boolean value for success/failure flag,
+ * 2 objects: one for data response on success and one for error response
+ * and return a Promise after 3 SECONDS.
+ * if flag is set to success - return the FIRST OBJECT nested inside "data" key, inside of a "response" object.
+ * if flag is set to !success - return the SECOND OBJECT
+ *
+ * EXAMPLE:
+ * async function caller(success) {
+ *   try {
+ *       const { data } = await requestMockup(sucess,
+ *                                            { msg: 'success!' },
+ *                                            { msg: 'fail!' })
+ *       return data
+ *   } catch(err) {
+ *       return err
+ *   }
+ * }
+ *
+ * invoking:
+ * caller(true)
+ *
+ * should return => { data : { msg: 'success!' } }
+ * after 3 seconds
+ *
+ * caller(false) => { msg: 'fail!' } (after 3 seconds)
+ */
+const requestMockup = () => TODO
+
 // ============================================================================
 module.exports = {
   consec,
   palisub,
   pipe,
+  requestMockup,
 }
