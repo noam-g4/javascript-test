@@ -3,6 +3,7 @@ const {
   palisub,
   pipe,
   requestMockup,
+  reqMockWrapper,
 } = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
@@ -44,6 +45,15 @@ describe('COMMON JS TEST', () => {
       expect(res.data).toBe('success')
     )
     requestMockup(false, undefined, 'fail').catch(err =>
+      expect(err).toBe('fail')
+    )
+  })
+
+  test('request mockup wrapper', () => {
+    reqMockWrapper(true, 'success', undefined).then(data =>
+      expect(data).toBe('success')
+    )
+    reqMockWrapper(false, undefined, 'fail').catch(err =>
       expect(err).toBe('fail')
     )
   })

@@ -54,8 +54,8 @@ const pipe = () => () => TODO
  * write a function that takes a boolean value for success/failure flag,
  * 2 objects: one for data response on success and one for error response
  * and return a Promise after 3 SECONDS.
- * if flag is set to success - return the FIRST OBJECT nested inside "data" key, inside of a "response" object.
- * if flag is set to !success - return the SECOND OBJECT
+ * if flag is set to 'true' - return the FIRST OBJECT nested inside "data" key, inside of a "response" object.
+ * if flag is set to 'false' - return the SECOND OBJECT
  *
  * EXAMPLE:
  * const isSuccess = [BOOLEAN VALUE]              // either true/ false
@@ -65,10 +65,26 @@ const pipe = () => () => TODO
  */
 const requestMockup = () => TODO
 
+/* ============================================================================
+ * 5. ASYNC/AWAIT - TRY/CATCH
+ *
+ * write an async function that wraps around the function from the last question.
+ * it takes EXACTLY the same arguments as the last function and passes them on,
+ * then it returns the res.data on successful request and the error on failure.
+ *
+ * EXAMPLE:
+ * const isSuccess = [BOOLEAN VALUE]              // either true/ false
+ * reqMockWrapper(isSuccess, 'success', 'fail')
+ *  .then(data => data)                           // return 'success'
+ *  .catch(err => err)                            // return 'fail!'
+ */
+const reqMockWrapper = async () => TODO
+
 // ============================================================================
 module.exports = {
   consec,
   palisub,
   pipe,
   requestMockup,
+  reqMockWrapper,
 }
