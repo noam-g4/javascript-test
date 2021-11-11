@@ -112,6 +112,17 @@ const reqMockWrapper = async () => TODO
  */
 const indexInArray = () => TODO
 
+/* ============================================================================
+ * 8. RECURSION - THE POWER OPERATOR
+ *
+ * write a function that raise x to the power of n
+ *
+ * pow(5, 4) => 625
+ * pow(2, 2) => 4
+ * (!notice that) = pow(7, 0) => 1
+ */
+const pow = () => TODO
+
 // ============================================================================
 module.exports = {
   consec,
@@ -121,4 +132,5 @@ module.exports = {
   reqMockWrapper,
   filterMap,
   indexInArray,
+  pow,
 }

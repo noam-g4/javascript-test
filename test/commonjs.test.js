@@ -75,4 +75,10 @@ describe('COMMON JS TEST', () => {
     expect(indexInArray([1, 2, 3], 2).message).toBe('out of bounds')
     expect(indexInArray([1, 2, 3], 4)).toBe(3)
   })
+
+  test('recursion - the power operator', () => {
+    expect(pow(5, 4)).toBe(625)
+    expect(pow(2, 2)).toBe(4)
+    expect(pow(7, 0)).toBe(1)
+  })
 })
