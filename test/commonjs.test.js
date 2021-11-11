@@ -1,4 +1,9 @@
-const { consec, palisub, pipe } = require('../exercises/commonjs')
+const {
+  consec,
+  palisub,
+  pipe,
+  requestMockup,
+} = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
   test('counting consecutive numbers', () => {
@@ -32,5 +37,19 @@ describe('COMMON JS TEST', () => {
     const fns1 = [add5, div2, mul4]
 
     expect(pipe(...fns1)(7)).toBe(24)
+  })
+
+  test('request mockup', () => {
+    const caller = async success => {
+      try {
+        const { data } = await requestMockup(success, 'success', 'fail')
+        return data
+      } catch (err) {
+        return err
+      }
+    }
+
+    expect(caller(true)).toBe('success')
+    expect(caller(false)).toBe('fail')
   })
 })
