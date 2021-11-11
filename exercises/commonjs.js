@@ -58,26 +58,12 @@ const pipe = () => () => TODO
  * if flag is set to !success - return the SECOND OBJECT
  *
  * EXAMPLE:
- * async function caller(success) {
- *   try {
- *       const { data } = await requestMockup(sucess,
- *                                            { msg: 'success!' },
- *                                            { msg: 'fail!' })
- *       return data
- *   } catch(err) {
- *       return err
- *   }
- * }
- *
- * invoking:
- * caller(true)
- *
- * should return => { data : { msg: 'success!' } }
- * after 3 seconds
- *
- * caller(false) => { msg: 'fail!' } (after 3 seconds)
+ * const isSuccess = [BOOLEAN VALUE]              // either true/ false
+ * requestMockup(isSuccess, 'success', 'fail')
+ *  .then(res => res.data)                        // return 'success'
+ *  .catch(err => err)                            // return 'fail!'
  */
-const requestMockup = (success, data, err) => TODO
+const requestMockup = () => TODO
 
 // ============================================================================
 module.exports = {
