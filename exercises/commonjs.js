@@ -95,14 +95,7 @@ const requestMockup = () => TODO
  *  .then(data => data)                           // return 'success'
  *  .catch(err => err)                            // return 'fail!'
  */
-const reqMockWrapper = async (isSuccess, res, err) => {
-  try {
-    const { data } = await requestMockup(isSuccess, res, err)
-    return data
-  } catch (err) {
-    return err
-  }
-}
+const reqMockWrapper = async () => TODO
 
 /* ============================================================================
  * 7. THROW AN ERROR
