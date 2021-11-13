@@ -15,7 +15,7 @@ const TODO = null
  * filterMap(employees, e => e.role === 'dev', 'email')
  * this should return => ['john@mail.com', ...and all the emails of the the "dev" employees]
  */
-const filterMap = (arr, prd, key) => arr.filter(prd).map(x => x[key])
+const filterMap = () => TODO
 
 /* ============================================================================
  * 2. CONSECUTIVE NUMBER COUNTER
@@ -26,7 +26,7 @@ const filterMap = (arr, prd, key) => arr.filter(prd).map(x => x[key])
  * EXAMPLE:
  * consec(5) => 0 + 1 + 2 + 3 + 4 + 5 => 15
  */
-const consec = n => ((n + 1) / 2) * n
+const consec = () => TODO
 
 /* ============================================================================
  * 3. SUB-STRING PALINDROME FINDER
