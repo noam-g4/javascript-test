@@ -6,6 +6,7 @@ const {
   filterMap,
   reqMockWrapper,
   indexInArray,
+  pow,
 } = require('../exercises/commonjs')
 
 describe('COMMON JS TEST', () => {
@@ -53,27 +54,33 @@ describe('COMMON JS TEST', () => {
     expect(pipe(...fns1)(7)).toBe(24)
   })
 
-  test('request mockup', () => {
-    requestMockup(true, 'success', undefined).then(res =>
+  test('request mockup success', () => {
+    return requestMockup(true, 'success', undefined).then(res => {
       expect(res.data).toBe('success')
-    )
-    requestMockup(false, undefined, 'fail').catch(err =>
-      expect(err).toBe('fail')
-    )
+    })
   })
 
-  test('request mockup wrapper', () => {
-    reqMockWrapper(true, 'success', undefined).then(data =>
-      expect(data).toBe('success')
-    )
-    reqMockWrapper(false, undefined, 'fail').catch(err =>
+  test('request mockup fail', () => {
+    return requestMockup(false, 'success', 'fail').catch(err => {
       expect(err).toBe('fail')
-    )
+    })
+  })
+
+  test('request mockup wrapper success', () => {
+    return reqMockWrapper(true, 'success', undefined).then(data => {
+      expect(data).toBe('success')
+    })
+  })
+
+  test('request mockup wrapper failure', () => {
+    return reqMockWrapper(false, 'success', 'fail').catch(err => {
+      expect(err).toBe('fail')
+    })
   })
 
   test('throw an error', () => {
-    expect(indexInArray([1, 2, 3], 2).message).toBe('out of bounds')
-    expect(indexInArray([1, 2, 3], 4)).toBe(3)
+    expect(indexInArray([1, 2, 3], 4).message).toBe('out of bounds')
+    expect(indexInArray([1, 2, 3], 2)).toBe(3)
   })
 
   test('recursion - the power operator', () => {

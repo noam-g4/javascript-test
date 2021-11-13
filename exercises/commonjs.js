@@ -15,7 +15,7 @@ const TODO = null
  * filterMap(employees, e => e.role === 'dev', 'email')
  * this should return => ['john@mail.com', ...and all the emails of the the "dev" employees]
  */
-const filterMap = () => TODO
+const filterMap = (arr, prd, key) => arr.filter(prd).map(x => x[key])
 
 /* ============================================================================
  * 2. CONSECUTIVE NUMBER COUNTER
@@ -26,7 +26,7 @@ const filterMap = () => TODO
  * EXAMPLE:
  * consec(5) => 0 + 1 + 2 + 3 + 4 + 5 => 15
  */
-const consec = () => TODO
+const consec = n => ((n + 1) / 2) * n
 
 /* ============================================================================
  * 3. SUB-STRING PALINDROME FINDER
@@ -70,7 +70,7 @@ const pipe = () => () => TODO
  *
  * write a function that takes a boolean value for success/failure flag,
  * 2 objects: one for data response on success and one for error response
- * and return a Promise after 3 SECONDS.
+ * and return a Promise.
  * if flag is set to 'true' - return the FIRST OBJECT nested inside "data" key, inside of a "response" object.
  * if flag is set to 'false' - return the SECOND OBJECT
  *
@@ -95,7 +95,14 @@ const requestMockup = () => TODO
  *  .then(data => data)                           // return 'success'
  *  .catch(err => err)                            // return 'fail!'
  */
-const reqMockWrapper = async () => TODO
+const reqMockWrapper = async (isSuccess, res, err) => {
+  try {
+    const { data } = await requestMockup(isSuccess, res, err)
+    return data
+  } catch (err) {
+    return err
+  }
+}
 
 /* ============================================================================
  * 7. THROW AN ERROR

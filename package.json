@@ -4,7 +4,7 @@
   "description": "full stack MERN developer test",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose --detectOpenHandles"
   },
   "repository": {
     "type": "git",
